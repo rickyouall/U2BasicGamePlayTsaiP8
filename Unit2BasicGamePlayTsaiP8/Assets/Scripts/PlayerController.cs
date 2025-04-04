@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public float zRange = 10;
     public float ZRange =  -16;
     public GameObject projectilePrefab;
+    public Transform projectileSpawnPoint;
+    private float sideBound = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         { 
         //Launch a projectile from the player
-        Instantiate(projectilePrefab, transform.position,projectilePrefab.transform.rotation);
+        Instantiate(projectilePrefab,projectileSpawnPoint.position, projectilePrefab.transform.rotation);
         }
 
         if (transform.position.z < ZRange)
@@ -52,5 +54,14 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
 
+           if (transform.position.x > sideBound)
+        {
+            Debug.Log("Game Over!"); Destroy(gameObject);
+        }
+         
+
     }
+
+
+
 }

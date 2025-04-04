@@ -1789,7 +1789,7 @@ GameObject:
   - component: {fileID: 1430750332972140089}
   m_Layer: 0
   m_Name: Dog_Pug_01
-  m_TagString: Untagged
+  m_TagString: Animals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1925,6 +1925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f907b5df1540a4e89162051762560c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
 --- !u!1 &2674234941435318625
 GameObject:
   m_ObjectHideFlags: 0
