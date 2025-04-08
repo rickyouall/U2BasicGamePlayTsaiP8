@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
     private float sideBound = 10;
+ 
     // Start is called before the first frame update
     void Start()
     {

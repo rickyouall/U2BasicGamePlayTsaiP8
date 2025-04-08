@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class DetectCollisionsX : MonoBehaviour
 {
-
+    private GameManager gameManager;
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.CompareTag("Animals"))
+        {
+
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
     }
+
 }
